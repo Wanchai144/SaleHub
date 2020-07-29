@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.productdetails.ProductdetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardview_light_background"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/icView"
+                layout="@layout/custom_toolbar_view" />
+
+
+            <LinearLayout
+                android:id="@+id/alertTitle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#000000"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/add_product_success" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorWhite"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/font_quark_lighr"
+                    android:text="เพิ่มสินค้าไปยังตะกร้าของคุณเรียบร้อย"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/back" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="360dp"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/next" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                app:centered="true"
+                app:fillColor="#B9EDF3"
+                app:pageColor="#E3F8FA"
+                app:snap="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="text"
+                        android:fontFamily="@font/font_quark_bold"
+                        android:textColor="#63CEC8"
+                        android:textSize="25dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="รหัสสินค้า : "
+                        android:fontFamily="@font/font_quark_bold"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_productCode"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/font_quark_bold"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20dp"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="รายละเอียด : "
+                        android:fontFamily="@font/font_quark_bold"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_deteil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_quark_bold"
+                        android:layout_marginLeft="10dp"
+                        android:text="text"
+                        android:textSize="20dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ราคา "
+                        android:fontFamily="@font/font_quark_bold"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_prie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:fontFamily="@font/font_quark_bold"
+                        android:textColor="#1C2E89"
+                        android:textSize="20dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" บาท"
+                        android:fontFamily="@font/font_quark_bold"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20dp"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="จำนวนสินค้า"
+                        android:fontFamily="@font/font_quark_bold"
+                        android:textSize="20dp"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/editext_add"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_customsearch"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/darker_gray"/>
+
+
+            <LinearLayout
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/add_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:background="@drawable/custom_bt_sles"
+                    android:orientation="horizontal"
+                    android:textColor="@android:color/white">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/shopping"
+                        android:tint="#FFFFFF"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" เพิ่มไปยังตะกร้า"
+                        android:fontFamily="@font/font_quark_bold"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="20dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@android:color/darker_gray"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frem_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:translationZ="1dp"
+            android:visibility="gone">
+            <include layout="@layout/item_progress" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/ImageView"
+            android:layout_width="10dp"
+            android:visibility="gone"
+            android:layout_height="10dp"
+            android:src="@drawable/add_cart" />
+    </LinearLayout>
+
+</LinearLayout>
+
+

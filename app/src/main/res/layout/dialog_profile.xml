@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:background="@drawable/ic_bgwhite"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/Tv_Camera"
+                android:textColor="@color/coler_app_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="กล้อง"
+                android:textSize="20sp">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/Tv_Photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+          android:textColor="@color/coler_app_main"
+                android:text="อัลบั้มรูปภาพ"
+                android:textSize="20sp">
+
+            </TextView>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_bgwhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/Tv_canclen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ยกเลิก"
+            android:textSize="20sp">
+
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

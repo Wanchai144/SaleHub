@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.subcategory.SubcategoryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/icView"
+            layout="@layout/custom_toolbar_view" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="17dp"
+            android:background="@drawable/ic_customsearch"
+            android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_searchBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_bgwhite"
+                android:hint="ค้นหาสาขา"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:lines="1" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/group"
+                android:layout_marginRight="10dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/frem_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:translationZ="1dp"
+        android:visibility="gone">
+
+        <include layout="@layout/item_progress" />
+
+    </FrameLayout>
+
+</RelativeLayout>
